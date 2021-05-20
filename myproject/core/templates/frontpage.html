@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Chillin Marketing Tech @Chile {% endblock %}
+
+{% block content %}
+
+
+<style>
+.inicio {
+ background-image: url("{% static 'content/bg3.png' %}");
+ background-color: white;
+ background-size: cover;
+ background-repeat:no-repeat;
+ background-position: center center;
+ 
+  
+}
+
+.mid {
+  background-image: url("{% static 'content/bg4.png' %}");
+  background-color: white;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  max-width: 100%;
+}
+
+</style>
+
+<section class='hero is-fullheight-with-navbar inicio'>
+ 
+</section>
+<section class='hero is-fullheight mid'>
+ <div class="container">
+   <div class="columns">
+    {% for c in service %}
+    <div class="column">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">{{ c.name }}</p>
+              
+            </div>
+          </div>
+      
+          <div class="content">
+            {{ c.description }}
+            <a href="#">#css</a> <a href="#">#responsive</a>
+            <br>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+ </div>
+</section>
+
+<br>
+<section class='hero'>
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
+          <p class="title">Branding</p>
+          <p class="subtitle">¿Cómo es percibida tu marca?</p>
+	  <figure class="image is-3by1">
+          <img style="border-radius: 25px;" src="https://media.giphy.com/media/SvFIGGWUQxjKn5b8u9/source.gif">
+          </figure>
+        </article>
+        <article class="tile is-child notification is-warning">
+          <p class="title">Posicionamiento Web</p>
+          <p class="subtitle">Alcanza a tus clientes</p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">Marketing Digital</p>
+          <p class="subtitle">Conoce y conecta con tus clientes</p>
+          <p class="title">Growth Marketing</p>
+          <p class="subtitle">Despliegue de marca </p> 
+	 <figure class="image is-4by3">
+          <img style="border-radius: 25px;" src="https://media.giphy.com/media/2ikwIgNrmPZICNmRyX/giphy.gif">
+         </figure>
+	</article>
+      </div>
+    </div>
+    
+    <div class="tile is-parent">
+        <article class="tile is-child notification is-primary">
+          <p class="title">Acelera tus ventas y aumenta tus beneficios</p>
+          <p class="subtitle">Conoce y conecta con tus clientes</p>
+        </article>
+
+      </div>
+    </div>
+<div class="tile is-parent">
+        <article class="tile is-child notification is-danger">
+          <p class="title">Desarrollo de Web App's</p>
+	  <p class="title">Desarrollo UI y UX </p>
+	  <p class="title">Publicidad Online</p>
+          <figure class="image is-2by3">
+          <img style="border-radius: 25px;" src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/source.gif">
+          </figure>
+        </article>
+      </div>
+    </div>
+</section>
+{% endblock %}
+
